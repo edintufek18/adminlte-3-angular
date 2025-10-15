@@ -8,7 +8,7 @@ import {
     faUserPlus,
     faChartPie
 } from '@fortawesome/free-solid-svg-icons';
-
+import { ApiService } from '@services/api.service';
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
@@ -21,4 +21,11 @@ export class DashboardComponent {
     faCartShopping = faCartShopping;
     faUserPlus = faUserPlus;
     faChartPie = faChartPie;
+
+    constructor (private apiService:ApiService){}
+
+    message: string = '';
+    messageSubscription = this.apiService.getMessage().subscribe(data => {
+        this.message = data.message;
+    });
 }

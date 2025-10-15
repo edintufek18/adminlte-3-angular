@@ -75,6 +75,8 @@
         "firebase-tools": "^13.11.2",
         "fs-web": "1.0.1",
         "husky": "9.0.11",
+        "inquirer": "^8.2.5",
+        "inquirer-autocomplete-prompt": "^1.4.0",
         "jasmine-core": "~5.1.2",
         "jasmine-spec-reporter": "~7.0.0",
         "karma": "6.4.3",
